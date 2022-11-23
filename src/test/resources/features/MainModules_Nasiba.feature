@@ -1,7 +1,7 @@
 Feature: Accessing all the main modules
   of the app
   As a user, I should be able accessing all the main modules of the app
-@ui
+  @ui
 
   Scenario Outline: verify user login successfully "<username>"
     Given user is on the login page
