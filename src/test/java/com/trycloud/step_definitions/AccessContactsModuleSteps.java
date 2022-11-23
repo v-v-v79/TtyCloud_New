@@ -14,13 +14,13 @@ public class AccessContactsModuleSteps {
     ContactModulePage_Reheman contactModulePage = new ContactModulePage_Reheman ();
     Actions actions = new Actions(Driver.getDriver());
 
-    @Given("user on the dashboard page")
-    public void user_on_the_dashboard_page() {
+    @Given("the user on dashboard page")
+    public void the_user_on_dashboard_page() {
         loginPage.navigateTo ();
         loginPage.trycloud_login ( "user4", "Userpass123" );
         loginPage.user_click_loginBtn ();
     }
-    @When("the user clicks the {string} module")
+    @When("user clicks {string} module")
     public void the_user_clicks_the_module(String string) {
         //loginPage.click_on_module_option ( "Contacts" );
         contactModulePage.ContactModuleBtn.click ();
