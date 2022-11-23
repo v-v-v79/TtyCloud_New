@@ -82,9 +82,10 @@ public class FavoritesSteps_Slava {
                 Assert.assertEquals("git-cheat-sheet-education", element.getText());
             }
         }
-        BrowserUtils.sleep(1);
+        BrowserUtils.sleep(2);
+        BrowserUtils.hover(filesModulePage1.uploadedFileActionButton);
         filesModulePage1.uploadedFileActionButton.click();
-        BrowserUtils.sleep(1);
+        BrowserUtils.sleep(2);
         filesModulePage1.fileDeleteButton.click();
     }
 }

@@ -13,8 +13,8 @@ public class WrongCredentialsSteps_Nasiba {
     WrongCredentialsPage_Nasiba wrongCredentials_pageNasiba = new WrongCredentialsPage_Nasiba();
     Actions actions = new Actions(Driver.getDriver());
 
-    @Given("user on the login page")
-    public void user_on_the_login_page() {
+    @Given("the user is on the login page")
+    public void the_user_is_on_the_login_page() {
         Driver.getDriver().get(Config.getProperty("trycloudEnv"));
 
 
@@ -26,8 +26,8 @@ public class WrongCredentialsSteps_Nasiba {
 
     }
 
-    @When("user click the login button")
-    public void user_click_the_login_button() {
+    @When("user clicks the login button")
+    public void user_clicks_the_login_button() {
        wrongCredentials_pageNasiba.btnLogin.click();
 
 
