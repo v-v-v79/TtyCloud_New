@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 
 
-public class MainModulesSteps_Nasiba {
+public class  MainModulesSteps_Nasiba {
 
     MainModulesPage_Nasiba mainModulesPageNasiba = new MainModulesPage_Nasiba();
     Actions actions = new Actions(Driver.getDriver());

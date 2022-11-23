@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 
 
-public class MainModulesPage_Nasiba {
+public class  MainModulesPage_Nasiba {
     public MainModulesPage_Nasiba() {
         PageFactory.initElements(Driver.getDriver(),this);
 
