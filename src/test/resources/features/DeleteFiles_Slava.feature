@@ -1,5 +1,5 @@
 Feature: As a user, I should be able to delete a file/folder.
-  @ui
+  @wip
   Scenario: Verify users delete a file/folder
     Given user on the dashboard page
     When the user clicks the "Files" module
