@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 
 
-public class User2_Page {
+public class WrongCredentialsPage_Nasiba {
 
-    public User2_Page() {
+    public WrongCredentialsPage_Nasiba() {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }

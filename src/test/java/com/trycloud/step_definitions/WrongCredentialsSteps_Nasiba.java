@@ -1,6 +1,6 @@
 package com.trycloud.step_definitions;
 
-import com.trycloud.pages.User2_Page;
+import com.trycloud.pages.WrongCredentialsPage_Nasiba;
 import com.trycloud.utilities.Config;
 import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -9,8 +9,8 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 
-public class user2_stepDef {
-    User2_Page user2_page = new User2_Page();
+public class WrongCredentialsSteps_Nasiba {
+    WrongCredentialsPage_Nasiba wrongCredentials_pageNasiba = new WrongCredentialsPage_Nasiba();
     Actions actions = new Actions(Driver.getDriver());
 
     @Given("user on the login page")
@@ -21,14 +21,14 @@ public class user2_stepDef {
     }
     @When("user enter invalid {string} and {string}")
     public void user_enter_invalid_and(String username, String password) {
-        user2_page.login(username,password);
+        wrongCredentials_pageNasiba.login(username,password);
 
 
     }
 
     @When("user click the login button")
     public void user_click_the_login_button() {
-       user2_page.btnLogin.click();
+       wrongCredentials_pageNasiba.btnLogin.click();
 
 
         }
@@ -36,7 +36,7 @@ public class user2_stepDef {
     @Then("verify {string} message should be Wrong username or password.")
     public void verifyMessageShouldBeWrongUsernameOrPassword(String arg0) {
         String expected="Wrong username or password.";
-        String actual =user2_page.wrongMesg.getText();
+        String actual = wrongCredentials_pageNasiba.wrongMesg.getText();
         Assert.assertEquals(expected,actual);
 
     }

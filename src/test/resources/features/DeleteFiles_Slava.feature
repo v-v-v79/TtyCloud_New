@@ -1,6 +1,7 @@
-Feature: As a user, I should be able to delete a file/folder.
-  @wip
-  Scenario: Verify users delete a file/folder
+
+    Feature: As a user, I should be able to delete a file/folder.
+    @wip
+    Scenario: Verify users delete a file/folder
     Given user on the dashboard page
     When the user clicks the "Files" module
     And user click action-icon from any file on the page
