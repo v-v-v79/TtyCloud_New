@@ -1,7 +1,6 @@
-@regression
+
 Feature: As a user, I should be able to access to Files module.
-
-
+  @win
   Scenario: verify users can access to Files module
     Given user on dashboard page
     When user clicks the Files module
