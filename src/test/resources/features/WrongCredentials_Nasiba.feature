@@ -8,4 +8,4 @@
     Then verify "<message>" message should be Wrong username or password.
     Examples:
       | username | password | message                     |
-      | user     | wrong    | Wrong username or password. |
+      | user4     | 12345   | Wrong username or password. |

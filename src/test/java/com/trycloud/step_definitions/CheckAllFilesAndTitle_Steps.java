@@ -2,7 +2,7 @@ package com.trycloud.step_definitions;
 
 import com.trycloud.pages.LoginPage;
 import com.trycloud.pages.MainModulesPage_Nasiba;
-import com.trycloud.pages.User4_Page;
+import com.trycloud.pages.CheckAllFilesAndTitle_Page;
 import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -14,8 +14,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 
-public class user4_stepDef {
-    User4_Page user4_page = new User4_Page();
+public class CheckAllFilesAndTitle_Steps {
+    CheckAllFilesAndTitle_Page checkAllFilesAndTitle_page = new CheckAllFilesAndTitle_Page();
     MainModulesPage_Nasiba mainModulePage = new MainModulesPage_Nasiba();
     Actions actions = new Actions(Driver.getDriver());
 
@@ -49,7 +49,7 @@ public class user4_stepDef {
         BrowserUtils.waitForPageToLoad(30);
         JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
         BrowserUtils.sleep(2);
-        js.executeScript("arguments[0].click();", user4_page.allFilesCheckBox);
+        js.executeScript("arguments[0].click();", checkAllFilesAndTitle_page.allFilesCheckBox);
         BrowserUtils.sleep(3);
     }
 
@@ -57,11 +57,11 @@ public class user4_stepDef {
     public void userVerifiesAllCheckboxesIsSelected() {
         BrowserUtils.waitForPageToLoad(30);
         JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
-        for ( WebElement element : user4_page.fileListCheckboxes) {
+        for ( WebElement element : checkAllFilesAndTitle_page.fileListCheckboxes) {
             Assert.assertTrue(element.isSelected());
         }
         BrowserUtils.sleep(1);
-        js.executeScript("arguments[0].click();", user4_page.allFilesCheckBox);
+        js.executeScript("arguments[0].click();", checkAllFilesAndTitle_page.allFilesCheckBox);
     }
 }
 

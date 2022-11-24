@@ -7,11 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class User4_Page {
+public class CheckAllFilesAndTitle_Page {
 
 
 
-    public User4_Page() {
+    public CheckAllFilesAndTitle_Page() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
