@@ -76,7 +76,7 @@ public class FavoritesSteps_Slava {
     @And("users uploads file with the “upload file” option Then verify the file is displayed on the page")
     public void usersUploadsFileWithTheUploadFileOptionThenVerifyTheFileIsDisplayedOnThePage() {
         filesModulePage1.uploadFile.
-                sendKeys("/src/test/resources/files_to_uploadgit-cheat-sheet-education.pdf");
+                sendKeys("/src/test/resources/files_to_upload/git-cheat-sheet-education.pdf");
         BrowserUtils.sleep(2);
 
         for (WebElement element : filesModulePage1.allFilesList) {
