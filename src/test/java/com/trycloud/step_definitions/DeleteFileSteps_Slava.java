@@ -10,6 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 
 public class DeleteFileSteps_Slava {
@@ -53,8 +54,8 @@ public class DeleteFileSteps_Slava {
 
     @When("the user clicks the Deleted files sub-module on the left side")
     public void theUserClicksTheDeletedFilesSubModuleOnTheLeftSide() {
-        BrowserUtils.hover(filesModulePage.deletedFilesMenu);
-        filesModulePage.deletedFilesMenu.click();
+        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+        js.executeScript("arguments[0].click();", filesModulePage.deletedFilesMenu);
         BrowserUtils.waitForPageToLoad(30);
     }
 

@@ -10,6 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -54,8 +55,9 @@ public class FavoritesSteps_Slava {
 
     @When("user click the {string} sub-module on the left side")
     public void user_click_the_sub_module_on_the_left_side(String string) {
-        BrowserUtils.sleep(2);
-        filesModulePage1.favoritesButton.click();
+        BrowserUtils.sleep(3);
+        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+        js.executeScript("arguments[0].click();", filesModulePage1.favoritesButton);
         BrowserUtils.waitForPageToLoad(30);
     }
 
@@ -74,7 +76,7 @@ public class FavoritesSteps_Slava {
     @And("users uploads file with the “upload file” option Then verify the file is displayed on the page")
     public void usersUploadsFileWithTheUploadFileOptionThenVerifyTheFileIsDisplayedOnThePage() {
         filesModulePage1.uploadFile.
-                sendKeys("/Users/vivedesh/IdeaProjects/TtyCloud_New/files_to_upload/git-cheat-sheet-education.pdf");
+                sendKeys("/src/test/resources/files_to_uploadgit-cheat-sheet-education.pdf");
         BrowserUtils.sleep(2);
 
         for (WebElement element : filesModulePage1.allFilesList) {
