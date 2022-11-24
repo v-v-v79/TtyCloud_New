@@ -62,8 +62,9 @@ public class DeleteFileSteps_Slava {
     @Then("Verify the deleted file is displayed on the page.")
     public void verify_the_deleted_file_is_displayed_on_the_page() {
         BrowserUtils.sleep(2);
-        actions.moveToElement(filesModulePage.sortDeleted)
-                .pause(1).click().pause(2).click().pause(1).perform();
+        filesModulePage.sortDeleted.click();
+        BrowserUtils.sleep(2);
+        filesModulePage.sortDeleted.click();
         BrowserUtils.sleep(2);
         actualFileName = filesModulePage.lastDeletedFileName.getText();
         BrowserUtils.sleep(2);
