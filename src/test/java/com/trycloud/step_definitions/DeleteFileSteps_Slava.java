@@ -40,7 +40,7 @@ public class DeleteFileSteps_Slava {
         BrowserUtils.sleep(3);
         BrowserUtils.hover(filesModulePage.firstFileName);
         BrowserUtils.sleep(3);
-        actualFileName = filesModulePage.firstFileName.getText();
+        expectedFileName = filesModulePage.firstFileName.getText();
         BrowserUtils.hover(filesModulePage.firstFileActionsMenu);
         filesModulePage.firstFileActionsMenu.click();
         BrowserUtils.sleep(3);
@@ -65,7 +65,7 @@ public class DeleteFileSteps_Slava {
         actions.moveToElement(filesModulePage.sortDeleted)
                 .pause(1).click().pause(2).click().pause(1).perform();
         BrowserUtils.sleep(2);
-        expectedFileName = filesModulePage.lastDeletedFileName.getText();
+        actualFileName = filesModulePage.lastDeletedFileName.getText();
         BrowserUtils.sleep(2);
         Assert.assertEquals(expectedFileName, actualFileName);
         actions.moveToElement(filesModulePage.restoreButton)

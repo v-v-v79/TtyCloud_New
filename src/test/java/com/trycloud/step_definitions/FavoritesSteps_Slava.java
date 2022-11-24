@@ -20,6 +20,10 @@ public class FavoritesSteps_Slava {
     FilesModulePage filesModulePage1 = new FilesModulePage();
     String linkText = "";
 
+    public static final String systemPath = System.getProperty("user.dir");
+    public static final String filePath = systemPath +
+            "/src/test/resources/files_to_upload/git-cheat-sheet-education.pdf";
+
     @Given("user is on the dashboard page")
     public void user_is_on_the_dashboard_page() {
         loginPage.navigateTo();
@@ -76,7 +80,7 @@ public class FavoritesSteps_Slava {
     @And("users uploads file with the “upload file” option Then verify the file is displayed on the page")
     public void usersUploadsFileWithTheUploadFileOptionThenVerifyTheFileIsDisplayedOnThePage() {
         filesModulePage1.uploadFile.
-                sendKeys("https://github.com/v-v-v79/TtyCloud_New/blob/5d4f822a4abae9e93466c1969896a1a0e6ca491c/src/test/resources/files_to_upload/git-cheat-sheet-education.pdf");
+                sendKeys(filePath);
         BrowserUtils.sleep(2);
 
         for (WebElement element : filesModulePage1.allFilesList) {
